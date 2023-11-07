@@ -1,0 +1,61 @@
+export const CVData = {
+  generalInformation: {
+    firstName: "John",
+    lastName: "Doe",
+    address: "99/A, Fake Road, Fake Town, Fake District",
+    email: "john.doe.isnotrreal@fake.com",
+    telephone: "123456789",
+  },
+  educations: [
+    {
+      id: crypto.randomUUID(),
+      institute: "Fake University",
+      fieldOfStudy: "Computer Science",
+      description: "Description.........",
+      startDate: "2015",
+      endDate: "2018",
+    },
+    {
+      id: crypto.randomUUID(),
+      institute: "K/Fake National School",
+      fieldOfStudy: "General Education",
+      description: "Description.........",
+      startDate: "2006",
+      endDate: "2014",
+    },
+    {
+      id: crypto.randomUUID(),
+      institute: "K/Fake Elementary School",
+      fieldOfStudy: "Elementary Education",
+      description: "Description.........",
+      startDate: "2004",
+      endDate: "2006",
+    },
+  ],
+  workExperiences: [
+    {
+      id: crypto.randomUUID(),
+      title: "Senior Software Developer",
+      companyName: "Microsoft",
+      description: "Description.........",
+      startDate: "2020",
+      endDate: "Current",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Junior Software Developer",
+      companyName: "Google",
+      description: "Description.........",
+      startDate: "2019",
+      endDate: "2020",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Software Developer Intern",
+      companyName: "Facebook",
+      description: "Description.........",
+      startDate: "2018",
+      endDate: "2019",
+    },
+  ],
+};

@@ -45,6 +45,15 @@ export function NewEducation({
     });
   }
 
+  function deleteEducation() {
+    updateEducation((draft) => {
+      draft.educations.splice(
+        draft.educations.findIndex((education) => education.id === id),
+      ),
+        0;
+    });
+  }
+
   return (
     <div>
       <Input
@@ -81,6 +90,7 @@ export function NewEducation({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
+      <button onClick={deleteEducation}>Delete education</button>
     </div>
   );
 }

@@ -3,9 +3,23 @@ import { NewEducation } from "./new-education";
 export function Education({ educations, updateEducations }) {
   const educationsArr = [];
 
+  function addNewEducation() {
+    updateEducations((draft) => {
+      draft.educations.push({
+        id: crypto.randomUUID(),
+        institute: "",
+        fieldOfStudy: "",
+        description: "",
+        startDate: "",
+        endDate: "",
+      });
+    });
+  }
+
   educations.forEach((education) => {
     educationsArr.push(
       <NewEducation
+        key={education.id}
         id={education.id}
         institute={education.institute}
         fieldOfStudy={education.fieldOfStudy}
@@ -23,7 +37,7 @@ export function Education({ educations, updateEducations }) {
         <h2>Education</h2>
         {educationsArr}
       </section>
-      <button>Add new education</button>
+      <button onClick={addNewEducation}>Add new education</button>
     </>
   );
 }

@@ -7,14 +7,17 @@ import { useImmer } from "use-immer";
 export function CVInformation() {
   const [cvData, updateCVData] = useImmer(CVData);
 
-  console.log(cvData.generalInformation);
+  console.log(cvData.educations);
   return (
     <form>
       <GeneralInformation
         generalInformation={cvData.generalInformation}
         updateGeneralInformation={updateCVData}
       ></GeneralInformation>
-      <Education educations={CVData.educations}></Education>
+      <Education
+        educations={cvData.educations}
+        updateEducations={updateCVData}
+      ></Education>
       <WorkExperience workExperiences={CVData.workExperiences}></WorkExperience>
       <button>Submit</button>
     </form>

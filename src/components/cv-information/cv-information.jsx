@@ -9,7 +9,7 @@ export function CVInformation() {
 
   console.log(cvData.educations);
   return (
-    <form>
+    <form onSubmit={(e) => e.preventDefault()}>
       <GeneralInformation
         generalInformation={cvData.generalInformation}
         updateGeneralInformation={updateCVData}

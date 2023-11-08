@@ -46,7 +46,7 @@ export function NewEducation({
   }
 
   return (
-    <div key={id}>
+    <div>
       <Input
         id={`institute${id}`}
         type={"text"}

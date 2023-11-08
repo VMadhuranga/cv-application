@@ -1,42 +1,19 @@
-import { Input } from "../input";
-import { TextArea } from "../text-area";
+import { NewEducation } from "./new-education";
 
-export function Education({ educations }) {
+export function Education({ educations, updateEducations }) {
   const educationsArr = [];
 
   educations.forEach((education) => {
     educationsArr.push(
-      <div key={education.id}>
-        <Input
-          id={`institute${education.id}`}
-          type={"text"}
-          text={"Institute: "}
-          value={education.institute}
-        ></Input>
-        <Input
-          id={`fieldOfStudy${education.id}`}
-          type={"text"}
-          text={"Field Of Study: "}
-          value={education.fieldOfStudy}
-        ></Input>
-        <TextArea
-          id={`educationDescription${education.id}`}
-          type={"text"}
-          text={"Description: "}
-          value={education.description}
-        ></TextArea>
-        <Input
-          id={`startDate${education.id}`}
-          text={"Start Date: "}
-          value={education.startDate}
-        ></Input>
-        <Input
-          id={`endDate${education.id}`}
-          type={"text"}
-          text={"End Date: "}
-          value={education.endDate}
-        ></Input>
-      </div>,
+      <NewEducation
+        id={education.id}
+        institute={education.institute}
+        fieldOfStudy={education.fieldOfStudy}
+        description={education.description}
+        startDate={education.startDate}
+        endDate={education.endDate}
+        updateEducation={updateEducations}
+      ></NewEducation>,
     );
   });
 

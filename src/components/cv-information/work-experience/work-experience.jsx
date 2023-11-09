@@ -1,6 +1,6 @@
 import { NewWorkExperience } from "./new-work-experience";
 
-export function WorkExperience({ workExperiences }) {
+export function WorkExperience({ workExperiences, updateWorkExperiences }) {
   const workExperiencesArr = [];
 
   workExperiences.forEach((experience) => {
@@ -13,6 +13,7 @@ export function WorkExperience({ workExperiences }) {
         description={experience.description}
         startDate={experience.startDate}
         endDate={experience.endDate}
+        updateWorkExperience={updateWorkExperiences}
       ></NewWorkExperience>,
     );
   });

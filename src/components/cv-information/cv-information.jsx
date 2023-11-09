@@ -7,7 +7,7 @@ import { useImmer } from "use-immer";
 export function CVInformation() {
   const [cvData, updateCVData] = useImmer(CVData);
 
-  console.log(cvData.educations);
+  console.log(cvData.workExperiences);
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <GeneralInformation
@@ -18,7 +18,10 @@ export function CVInformation() {
         educations={cvData.educations}
         updateEducations={updateCVData}
       ></Education>
-      <WorkExperience workExperiences={CVData.workExperiences}></WorkExperience>
+      <WorkExperience
+        workExperiences={cvData.workExperiences}
+        updateWorkExperiences={updateCVData}
+      ></WorkExperience>
       <button>Submit</button>
     </form>
   );

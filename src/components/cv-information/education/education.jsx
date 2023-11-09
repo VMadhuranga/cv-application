@@ -1,4 +1,5 @@
 import { NewEducation } from "./new-education";
+import { Button } from "../../button";
 
 export function Education({ educations, updateEducations }) {
   const educationsArr = [];
@@ -37,7 +38,10 @@ export function Education({ educations, updateEducations }) {
         <h2>Education</h2>
         {educationsArr}
       </section>
-      <button onClick={addNewEducation}>Add new education</button>
+      <Button
+        text={"Add new education"}
+        handleOnClick={addNewEducation}
+      ></Button>
     </>
   );
 }

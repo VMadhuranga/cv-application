@@ -1,5 +1,6 @@
 import { Input } from "../input";
 import { TextArea } from "../text-area";
+import { Button } from "../../button";
 
 export function NewWorkExperience({
   id,
@@ -94,7 +95,7 @@ export function NewWorkExperience({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
-      <button onClick={deleteExperience}>Delete</button>
+      <Button text={"Delete"} handleOnClick={deleteExperience}></Button>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { Input } from "../input";
 import { TextArea } from "../text-area";
+import { Button } from "../../button";
 
 export function NewEducation({
   id,
@@ -90,7 +91,7 @@ export function NewEducation({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
-      <button onClick={deleteEducation}>Delete education</button>
+      <Button text={"Delete"} handleOnClick={deleteEducation}></Button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { NewWorkExperience } from "./new-work-experience";
+import { Button } from "../../button";
 
 export function WorkExperience({ workExperiences, updateWorkExperiences }) {
   const workExperiencesArr = [];
@@ -37,7 +38,10 @@ export function WorkExperience({ workExperiences, updateWorkExperiences }) {
         <h2>Work Experience</h2>
         {workExperiencesArr}
       </section>
-      <button onClick={addNewWorkExperience}>Add new experience</button>
+      <Button
+        text={"Add new experience"}
+        handleOnClick={addNewWorkExperience}
+      ></Button>
     </>
   );
 }

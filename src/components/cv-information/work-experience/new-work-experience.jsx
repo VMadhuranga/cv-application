@@ -48,6 +48,15 @@ export function NewWorkExperience({
     });
   }
 
+  function deleteExperience() {
+    updateWorkExperience((draft) => {
+      draft.workExperiences.splice(
+        draft.workExperiences.findIndex((education) => education.id === id),
+      ),
+        0;
+    });
+  }
+
   return (
     <div key={id}>
       <Input
@@ -85,6 +94,7 @@ export function NewWorkExperience({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
+      <button onClick={deleteExperience}>Delete</button>
     </div>
   );
 }

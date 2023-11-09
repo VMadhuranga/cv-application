@@ -1,28 +1,22 @@
-import { CVData } from "../../cv-data";
 import { GeneralInformation } from "./general-information/general-information";
 import { Education } from "./education/education";
 import { WorkExperience } from "./work-experience/work-experience";
-import { useImmer } from "use-immer";
 
-export function CVInformation() {
-  const [cvData, updateCVData] = useImmer(CVData);
-
-  console.log(cvData.workExperiences);
+export function CVInformation({ cvInformation, updateCvInformation }) {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <GeneralInformation
-        generalInformation={cvData.generalInformation}
-        updateGeneralInformation={updateCVData}
+        generalInformation={cvInformation.generalInformation}
+        updateGeneralInformation={updateCvInformation}
       ></GeneralInformation>
       <Education
-        educations={cvData.educations}
-        updateEducations={updateCVData}
+        educations={cvInformation.educations}
+        updateEducations={updateCvInformation}
       ></Education>
       <WorkExperience
-        workExperiences={cvData.workExperiences}
-        updateWorkExperiences={updateCVData}
+        workExperiences={cvInformation.workExperiences}
+        updateWorkExperiences={updateCvInformation}
       ></WorkExperience>
-      <button>Submit</button>
     </form>
   );
 }

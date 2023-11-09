@@ -50,8 +50,8 @@ export function NewEducation({
     updateEducation((draft) => {
       draft.educations.splice(
         draft.educations.findIndex((education) => education.id === id),
-      ),
-        0;
+        1,
+      );
     });
   }
 

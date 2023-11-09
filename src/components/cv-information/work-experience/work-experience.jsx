@@ -3,6 +3,19 @@ import { NewWorkExperience } from "./new-work-experience";
 export function WorkExperience({ workExperiences, updateWorkExperiences }) {
   const workExperiencesArr = [];
 
+  function addNewWorkExperience() {
+    updateWorkExperiences((draft) => {
+      draft.workExperiences.push({
+        id: crypto.randomUUID(),
+        title: "",
+        companyName: "",
+        description: "",
+        startDate: "",
+        endDate: "",
+      });
+    });
+  }
+
   workExperiences.forEach((experience) => {
     workExperiencesArr.push(
       <NewWorkExperience
@@ -24,7 +37,7 @@ export function WorkExperience({ workExperiences, updateWorkExperiences }) {
         <h2>Work Experience</h2>
         {workExperiencesArr}
       </section>
-      <button>Add new experience</button>
+      <button onClick={addNewWorkExperience}>Add new experience</button>
     </>
   );
 }

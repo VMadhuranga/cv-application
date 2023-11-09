@@ -53,8 +53,8 @@ export function NewWorkExperience({
     updateWorkExperience((draft) => {
       draft.workExperiences.splice(
         draft.workExperiences.findIndex((education) => education.id === id),
-      ),
-        0;
+        1,
+      );
     });
   }
 

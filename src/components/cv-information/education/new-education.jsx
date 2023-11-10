@@ -56,7 +56,7 @@ export function NewEducation({
   }
 
   return (
-    <div>
+    <div className="new-education">
       <Input
         id={`institute${id}`}
         type={"text"}
@@ -91,7 +91,12 @@ export function NewEducation({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
-      <Button text={"Delete"} handleOnClick={deleteEducation}></Button>
+      <Button
+        text={"Delete"}
+        handleOnClick={deleteEducation}
+        className={"delete"}
+      ></Button>
+      <hr />
     </div>
   );
 }

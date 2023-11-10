@@ -59,7 +59,7 @@ export function NewWorkExperience({
   }
 
   return (
-    <div key={id}>
+    <div className="new-work-experience">
       <Input
         id={`title${id}`}
         type={"text"}
@@ -95,7 +95,12 @@ export function NewWorkExperience({
         value={endDate}
         handleOnChange={handleEndDateChange}
       ></Input>
-      <Button text={"Delete"} handleOnClick={deleteExperience}></Button>
+      <Button
+        text={"Delete"}
+        handleOnClick={deleteExperience}
+        className={"delete"}
+      ></Button>
+      <hr />
     </div>
   );
 }

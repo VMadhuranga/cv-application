@@ -3,6 +3,7 @@ import { CVInformation } from "./cv-information/cv-information";
 import { CVPreview } from "./cv-preview/cv-preview";
 import { Button } from "./button";
 import { useImmer } from "use-immer";
+import "./app.css";
 
 export function App() {
   const [cvData, updateCVData] = useImmer(CVData);
@@ -25,11 +26,12 @@ export function App() {
           ></CVInformation>
         )}
         {preview && <CVPreview cvInformation={cvData}></CVPreview>}
-        <div>
+        <div className="submit-edit-container">
           <Button
             text={"Submit"}
             handleOnClick={handleSubmitEditChange}
             disabled={preview}
+            className={"submit"}
           ></Button>
           <Button
             text={"Edit"}
@@ -38,6 +40,9 @@ export function App() {
           ></Button>
         </div>
       </main>
+      <footer>
+        <p>&copy; 2023 VMadhuranga</p>
+      </footer>
     </>
   );
 }

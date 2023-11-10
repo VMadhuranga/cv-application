@@ -1,0 +1,11 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input input {
+  padding: 3px 6px;
+  font-size: inherit;
+  font-family: inherit;
+}

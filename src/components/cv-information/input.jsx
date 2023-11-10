@@ -1,6 +1,8 @@
+import "./input.css";
+
 export function Input({ id, type, text, value, handleOnChange }) {
   return (
-    <div>
+    <div className="input">
       <label htmlFor={id}>{text}</label>
       <input
         type={type}

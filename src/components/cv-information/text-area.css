@@ -1,0 +1,10 @@
+.text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text-area textarea {
+  padding: 3px 6px;
+  resize: none;
+}

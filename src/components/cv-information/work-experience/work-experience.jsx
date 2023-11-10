@@ -33,15 +33,14 @@ export function WorkExperience({ workExperiences, updateWorkExperiences }) {
   });
 
   return (
-    <>
-      <section>
-        <h2>Work Experience</h2>
-        {workExperiencesArr}
-      </section>
+    <section className="work-experience">
+      <h2>Work Experience</h2>
+      {workExperiencesArr}
       <Button
         text={"Add new experience"}
         handleOnClick={addNewWorkExperience}
+        className={"add-new"}
       ></Button>
-    </>
+    </section>
   );
 }

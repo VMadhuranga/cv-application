@@ -33,15 +33,14 @@ export function Education({ educations, updateEducations }) {
   });
 
   return (
-    <>
-      <section>
-        <h2>Education</h2>
-        {educationsArr}
-      </section>
+    <section className="education">
+      <h2>Education</h2>
+      {educationsArr}
       <Button
         text={"Add new education"}
         handleOnClick={addNewEducation}
+        className={"add-new"}
       ></Button>
-    </>
+    </section>
   );
 }

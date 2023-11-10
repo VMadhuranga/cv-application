@@ -35,7 +35,7 @@ export function GeneralInformation({
   }
 
   return (
-    <section>
+    <section className="general-information">
       <h2>General Information</h2>
       <Input
         id={"firstName"}

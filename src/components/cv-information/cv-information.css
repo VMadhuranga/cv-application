@@ -1,0 +1,27 @@
+.cv-information {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.general-information,
+.education,
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-education,
+.new-work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-education hr,
+.new-work-experience hr {
+  margin: 10px;
+}

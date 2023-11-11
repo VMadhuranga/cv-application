@@ -1,19 +1,22 @@
 export function EducationPreview({ educations }) {
   return (
-    <div>
-      <h3>Education</h3>
-      {educations.map((education) => {
+    <section className="education-preview">
+      <h2>Education</h2>
+      {educations.map((education, index) => {
         return (
-          <div key={education.id}>
-            <h4>{education.institute}</h4>
+          <div key={education.id} className="education-preview-details">
+            <div>
+              <h4>{education.institute}</h4>
+              <p>
+                {education.startDate} - {education.endDate}
+              </p>
+            </div>
             <p>{education.fieldOfStudy}</p>
             <p>{education.description}</p>
-            <p>
-              {education.startDate} - {education.endDate}
-            </p>
+            {educations.length - 1 !== index && <hr />}
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }

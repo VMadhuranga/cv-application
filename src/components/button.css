@@ -1,6 +1,7 @@
 .delete,
 .add-new,
-.submit {
+.submit,
+.edit {
   font-weight: bold;
   font-size: inherit;
   color: #fff;
@@ -9,14 +10,15 @@
 }
 
 .delete {
-  background-color: #f87171;
+  background-color: #b91c1c;
 }
 
 .add-new {
-  background-color: #60a5fa;
+  background-color: #1d4ed8;
 }
 
-.submit {
+.submit,
+.edit {
   width: 100%;
-  background-color: #10b981;
+  background-color: #047857;
 }

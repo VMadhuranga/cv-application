@@ -37,6 +37,7 @@ export function App() {
             text={"Edit"}
             handleOnClick={handleSubmitEditChange}
             disabled={!preview}
+            className={"edit"}
           ></Button>
         </div>
       </main>

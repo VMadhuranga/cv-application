@@ -7,4 +7,6 @@
 .text-area textarea {
   padding: 3px 6px;
   resize: none;
+  font-size: inherit;
+  font-family: inherit;
 }

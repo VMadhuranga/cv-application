@@ -1,19 +1,22 @@
 export function WorkExperiencePreview({ workExperiences }) {
   return (
-    <div>
-      <h3>Work Experience</h3>
-      {workExperiences.map((experience) => {
+    <section className="work-experience-preview">
+      <h2>Work Experience</h2>
+      {workExperiences.map((experience, index) => {
         return (
-          <div key={experience.id}>
-            <h4>{experience.title}</h4>
+          <div key={experience.id} className="work-experience-preview-details">
+            <div>
+              <h4>{experience.title}</h4>
+              <p>
+                {experience.startDate} - {experience.endDate}
+              </p>
+            </div>
             <p>{experience.companyName}</p>
             <p>{experience.description}</p>
-            <p>
-              {experience.startDate} - {experience.endDate}
-            </p>
+            {workExperiences.length - 1 !== index && <hr />}
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }

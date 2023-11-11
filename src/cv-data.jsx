@@ -9,53 +9,23 @@ export const CVData = {
   educations: [
     {
       id: crypto.randomUUID(),
-      institute: "Fake University",
+      institute: "University of Fake",
       fieldOfStudy: "Computer Science",
-      description: "Description.........",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aliquam magni ipsam ex, quaerat nostrum ut quis nesciunt tempora veroerror natus beatae quam quia doloribus, rem eius veniam? Explicabo.",
       startDate: "2015",
       endDate: "2018",
-    },
-    {
-      id: crypto.randomUUID(),
-      institute: "K/Fake National School",
-      fieldOfStudy: "General Education",
-      description: "Description.........",
-      startDate: "2006",
-      endDate: "2014",
-    },
-    {
-      id: crypto.randomUUID(),
-      institute: "K/Fake Elementary School",
-      fieldOfStudy: "Elementary Education",
-      description: "Description.........",
-      startDate: "2004",
-      endDate: "2006",
     },
   ],
   workExperiences: [
     {
       id: crypto.randomUUID(),
       title: "Senior Software Developer",
-      companyName: "Microsoft",
-      description: "Description.........",
+      companyName: "Fake inc.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aliquam magni ipsam ex, quaerat nostrum ut quis nesciunt tempora veroerror natus beatae quam quia doloribus, rem eius veniam? Explicabo.",
       startDate: "2020",
       endDate: "Current",
-    },
-    {
-      id: crypto.randomUUID(),
-      title: "Junior Software Developer",
-      companyName: "Google",
-      description: "Description.........",
-      startDate: "2019",
-      endDate: "2020",
-    },
-    {
-      id: crypto.randomUUID(),
-      title: "Software Developer Intern",
-      companyName: "Facebook",
-      description: "Description.........",
-      startDate: "2018",
-      endDate: "2019",
     },
   ],
 };

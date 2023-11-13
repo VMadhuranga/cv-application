@@ -28,16 +28,9 @@ export function App() {
         {preview && <CVPreview cvInformation={cvData}></CVPreview>}
         <div className="submit-edit-container">
           <Button
-            text={"Submit"}
+            text={!preview ? "Submit" : "Edit"}
             handleOnClick={handleSubmitEditChange}
-            disabled={preview}
-            className={"submit"}
-          ></Button>
-          <Button
-            text={"Edit"}
-            handleOnClick={handleSubmitEditChange}
-            disabled={!preview}
-            className={"edit"}
+            className={!preview ? "submit" : "edit"}
           ></Button>
         </div>
       </main>

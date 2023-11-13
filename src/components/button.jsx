@@ -1,14 +1,6 @@
 import "./button.css";
 
-export function Button({ text, handleOnClick, disabled, className }) {
-  if (disabled) {
-    return (
-      <button onClick={handleOnClick} className={className} disabled hidden>
-        {text}
-      </button>
-    );
-  }
-
+export function Button({ text, handleOnClick, className }) {
   return (
     <button onClick={handleOnClick} className={className}>
       {text}

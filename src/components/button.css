@@ -17,8 +17,12 @@
   background-color: #1d4ed8;
 }
 
-.submit,
-.edit {
+.submit {
   width: 100%;
   background-color: #047857;
+}
+
+.edit {
+  width: 100%;
+  background-color: #111827;
 }
